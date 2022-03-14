@@ -1,14 +1,15 @@
 import 'package:course_app/common/custom_colors.dart';
+import 'package:course_app/pages/intro/main.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(DoctorNest());
+  runApp(CourseVerse());
 }
 
-class DoctorNest extends StatelessWidget {
+class CourseVerse extends StatelessWidget {
   @override
   void initState() async {
     // await () => ("");
@@ -21,6 +22,7 @@ class DoctorNest extends StatelessWidget {
       onGenerateRoute: (RouteSettings settings) {
         print('build route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
+          "/intro": (context) => IntroScreen(),
         };
         WidgetBuilder? builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder!(ctx));
