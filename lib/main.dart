@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/pages/intro/main.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+import 'package:course_app/pages/register/main.dart';
+import 'package:course_app/pages/register/mobile/main.dart';
+import 'package:course_app/pages/register/mobile/otp/main.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,6 +26,9 @@ class CourseVerse extends StatelessWidget {
         print('build route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
           "/intro": (context) => IntroScreen(),
+          "/register": (context) => RegisterHome(),
+          "/register/mobile": (context) => RegisterMobile(),
+          "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder!(ctx));

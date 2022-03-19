@@ -1,3 +1,4 @@
+import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/common/icons.dart';
 import 'package:course_app/pages/register/register_button.dart';
@@ -5,7 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 
 class RegisterHome extends StatefulWidget {
   @override
