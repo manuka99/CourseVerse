@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "896000200193",
+    "project_id": "courseverse",
+    "storage_bucket": "courseverse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896000200193:android:74d0961733d0db89857a00",
+        "android_client_info": {
+          "package_name": "com.example.course_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896000200193-pr4omdau6eg3410209p0q3osk6lidnag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.course_app",
+            "certificate_hash": "5f019f5b8a20bb31f83cea3e4abf96f369649647"
+          }
+        },
+        {
+          "client_id": "896000200193-dtkuk1kbavbhdsbqnaajr2k77hn5oefp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa2E7bxS_FfQz2D6u7buhr-fXtvs8xO1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896000200193-dtkuk1kbavbhdsbqnaajr2k77hn5oefp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
