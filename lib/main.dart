@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:course_app/pages/register/main.dart';
 import 'package:course_app/pages/register/mobile/main.dart';
 import 'package:course_app/pages/register/mobile/otp/main.dart';
+import 'package:course_app/pages/dashboard/main.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,6 +26,7 @@ class CourseVerse extends StatelessWidget {
       onGenerateRoute: (RouteSettings settings) {
         print('build route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
+          "/": (context) => HomeDashBoard(),
           "/intro": (context) => IntroScreen(),
           "/register": (context) => RegisterHome(),
           "/register/mobile": (context) => RegisterMobile(),
