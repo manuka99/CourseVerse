@@ -1,5 +1,5 @@
 //import 'package:course_app/constants.dart';
-// import 'package:course_app/details_screen.dart';
+import 'package:course_app/pages/courses/details_screen.dart';
 import 'package:course_app/pages/courses/model/category.dart';
 import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
@@ -30,16 +30,35 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Row(
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: <Widget>[
+            //     SvgPicture.asset("assets/icons/menu.svg"),
+            //     Image.asset("assets/images/profilePic.png"),
+            //   ],
+            // ),
+                  Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                SvgPicture.asset("assets/icons/menu.svg"),
-                Image.asset("assets/images/developer.png"),
+                Text("Hey Developers", style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.blueAccent
+                ),),
+                Container(
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/profilePic.png')
+                    )
+                  ),
+                )
               ],
             ),
             SizedBox(height: 30),
-            Text("Hey Developer,", style: kHeadingextStyle),
-            Text("Search a course you want to study", style: kSubheadingextStyle),
+            // Text("Hey Developer,", style: kHeadingextStyle),
+            Text("Search courses to study...", style: kHeadingextStyle),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30),
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -84,12 +103,12 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => DetailsScreen(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailsScreen(),
+                        ),
+                      );
                     },
                     child: Container(
                       padding: EdgeInsets.all(20),

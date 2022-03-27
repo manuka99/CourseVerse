@@ -9,6 +9,7 @@ import 'package:course_app/pages/register/mobile/otp/main.dart';
 import 'package:course_app/pages/dashboard/main.dart';
 import 'package:course_app/pages/courses/main.dart';
 
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
