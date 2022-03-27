@@ -10,9 +10,9 @@ class Section1 extends StatelessWidget {
     CircularButton(
         svg:
             SvgPicture.asset("assets/icons/nurse.svg", color: Colors.lightBlue),
-        title: "Doctor",
-        description: "Chanel Doctor",
-        route: "/order/history"),
+        title: "Courses",
+        description: "Course Management",
+        route: "/course"),
     CircularButton(
         svg: SvgPicture.asset("assets/icons/pill.svg", color: Colors.lightBlue),
         title: "Medicine",

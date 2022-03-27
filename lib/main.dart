@@ -6,6 +6,7 @@ import 'package:course_app/pages/register/main.dart';
 import 'package:course_app/pages/register/mobile/main.dart';
 import 'package:course_app/pages/register/mobile/otp/main.dart';
 import 'package:course_app/pages/dashboard/main.dart';
+import 'package:course_app/pages/courses/main.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +31,7 @@ class CourseVerse extends StatelessWidget {
           "/intro": (context) => IntroScreen(),
           "/register": (context) => RegisterHome(),
           "/register/mobile": (context) => RegisterMobile(),
+          "/course": (context) => Course(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];
