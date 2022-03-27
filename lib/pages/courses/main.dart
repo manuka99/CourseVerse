@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'MainPage.dart';
+import 'MainPage.dart';
 void main() {
-  runApp(Course());
+  runApp(CourseMainScreen());
 }
 
-class Course extends StatelessWidget {
+class CourseMainScreen extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,9 @@ class Course extends StatelessWidget {
         fontFamily: 'Avenir'
       ),
       home: MyHomePage(),
-      // routes: {
-      //   '/mainPage' : (context)=>MainPage(),
-      // },
+      routes: {
+        '/courses-page' : (context)=>CoursesPage(),
+      },
     );
   }
 }
@@ -101,14 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 right: 0,
                 child: Center(
                   child: InkWell(
-                    // onTap: (){openMainPage();},
+                    onTap: (){openCoursesPage();},
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(40)),
                       ),
-                      child: Text('Continue..', style: TextStyle(
+                      child: Text('View Courses..', style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w700
                       ),),
@@ -122,8 +122,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-  // void openMainPage()
-  // {
-  //   Navigator.pushNamed(context, '/mainPage');
-  // }
+  void openCoursesPage()
+  {
+    Navigator.pushNamed(context, '/courses-page');
+  }
 }

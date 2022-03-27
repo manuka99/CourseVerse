@@ -1,3 +1,4 @@
+import 'package:course_app/pages/courses/MainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/pages/intro/main.dart';
@@ -31,7 +32,8 @@ class CourseVerse extends StatelessWidget {
           "/intro": (context) => IntroScreen(),
           "/register": (context) => RegisterHome(),
           "/register/mobile": (context) => RegisterMobile(),
-          "/course": (context) => Course(),
+          "/course": (context) => CourseMainScreen(),
+          "/courses-page": (context) => CoursesPage(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];
