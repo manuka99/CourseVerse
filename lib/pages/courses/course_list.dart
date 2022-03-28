@@ -1,10 +1,12 @@
 //import 'package:course_app/constants.dart';
+import 'package:course_app/pages/courses/admin_login.dart';
 import 'package:course_app/pages/courses/details_screen.dart';
 import 'package:course_app/pages/courses/model/category.dart';
 import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:course_app/common/custom_colors.dart';
 
 void main() => runApp(CoursesPage());
 
@@ -17,6 +19,9 @@ class CoursesPage extends StatelessWidget {
       title: 'Course App',
       theme: ThemeData(),
       home: HomeScreen(),
+      routes: {
+        '/courses-page': (context) => CoursesPage(),
+      },
     );
   }
 }
@@ -30,29 +35,33 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: <Widget>[
-            //     SvgPicture.asset("assets/icons/menu.svg"),
-            //     Image.asset("assets/images/profilePic.png"),
-            //   ],
-            // ),
-                  Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Hey Developers", style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.blueAccent
-                ),),
+                OutlinedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminLogin(),
+                        ),
+                      );
+                    },
+                    child: Text("Admin Login"),
+                    style: OutlinedButton.styleFrom(
+                      textStyle: TextStyle(
+                          fontSize: 12,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w600,
+                          color: kTextColor.withOpacity(.5)),
+                    )),
                 Container(
                   height: 30,
                   width: 30,
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/profilePic.png')
-                    )
-                  ),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          image: AssetImage('assets/images/profilePic.png'))),
                 )
               ],
             ),

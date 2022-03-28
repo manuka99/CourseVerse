@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MainPage.dart';
+import 'course_list.dart';
 void main() {
   runApp(CourseMainScreen());
 }

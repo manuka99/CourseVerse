@@ -155,6 +155,7 @@ class DetailsScreen extends StatelessWidget {
                             ),
                             SizedBox(width: 20),
                             Expanded(
+                            
                               child: Container(
                                 alignment: Alignment.center,
                                 height: 56,

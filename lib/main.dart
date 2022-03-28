@@ -1,4 +1,5 @@
-import 'package:course_app/pages/courses/MainPage.dart';
+import 'package:course_app/pages/courses/admin_login.dart';
+import 'package:course_app/pages/courses/course_list.dart';
 import 'package:flutter/material.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/pages/intro/main.dart';
@@ -7,7 +8,7 @@ import 'package:course_app/pages/register/main.dart';
 import 'package:course_app/pages/register/mobile/main.dart';
 import 'package:course_app/pages/register/mobile/otp/main.dart';
 import 'package:course_app/pages/dashboard/main.dart';
-import 'package:course_app/pages/courses/main.dart';
+import 'package:course_app/pages/courses/course_splash.dart';
 
 
 Future<void> main() async {
@@ -35,6 +36,7 @@ class CourseVerse extends StatelessWidget {
           "/register/mobile": (context) => RegisterMobile(),
           "/course": (context) => CourseMainScreen(),
           "/courses-page": (context) => CoursesPage(),
+          "/admin-login": (context) => AdminLogin(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];
