@@ -1,17 +1,17 @@
-class Doctor{
+class Course{
   late String id;
   late String name;
-  late String skill;
+  late String specialization;
   late String rating;
   late String imageUrl;
 
-  Doctor({required this.id, required this.name, required this.skill, required this.rating, required this.imageUrl});
+  Course({required this.id, required this.name, required this.specialization, required this.rating, required this.imageUrl});
 
-  static Doctor fromJson(Map<String, Object?> json) {
-    return new Doctor(
+  static Course fromJson(Map<String, Object?> json) {
+    return new Course(
       id: json['id']! as String,
       name: json['name']! as String,
-      skill: json['skill']! as String,
+      specialization: json['specialization']! as String,
       rating: json['rating']! as String,
       imageUrl: json['imageUrl']! as String,
     );
@@ -21,7 +21,7 @@ class Doctor{
     return {
       'id': id,
       'name': name,
-      'skill': skill,
+      'specialization': specialization,
       'rating': rating,
       'imageUrl': imageUrl,
     };
