@@ -1,3 +1,4 @@
+import 'package:course_app/pages/courses/admin_course_add.dart';
 import 'package:course_app/pages/courses/admin_login.dart';
 import 'package:course_app/pages/courses/course_list.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,7 @@ class CourseVerse extends StatelessWidget {
           "/course": (context) => CourseMainScreen(),
           "/courses-page": (context) => CoursesPage(),
           "/admin-login": (context) => AdminLogin(),
+          "/admin-course-list": (context) => AdminCourseAdd(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];

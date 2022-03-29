@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:course_app/common/custom_colors.dart';
 
+import 'admin_course_add.dart';
+import 'course_list.dart';
+
 class AdminLogin extends StatefulWidget {
   @override
   _AdminLoginWidgetState createState() => _AdminLoginWidgetState();
@@ -27,7 +30,8 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
                   style: TextStyle(
                       fontSize: 40,
                       fontFamily: "Poppins",
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w700,
+                      color: Color.fromRGBO(255, 255, 255, 1),
                       height: 1)),
             ),
           ),
@@ -38,7 +42,7 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
                 maxLength: 20,
                 decoration: InputDecoration(
                   labelText: 'User Name',
-                  hintText: 'Kasun silva',
+                  hintText: 'Enter user name',
                   labelStyle: TextStyle(
                     color: CustomColors.blackDark1TextColor,
                     fontFamily: "Poppins",
@@ -52,6 +56,8 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
           new ListTile(
             contentPadding: EdgeInsets.fromLTRB(50, 20, 50, 0),
             title: new TextFormField(
+                autofocus: false,
+                obscureText: true,
                 maxLength: 20,
                 decoration: InputDecoration(
                   labelText: 'Password',
@@ -70,7 +76,14 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
               top: 350,
               left: 55,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AdminCourseAdd(),
+                      ),
+                    );
+                  },
                   style: ButtonStyle(
                       fixedSize: MaterialStateProperty.all(Size(303, 50)),
                       backgroundColor: MaterialStateProperty.all(
