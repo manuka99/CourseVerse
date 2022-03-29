@@ -1,5 +1,5 @@
-// import 'package:course_app/pages/account/main.dart';
-// import 'package:course_app/pages/chat/main.dart';
+import 'package:course_app/pages/account/main.dart';
+import 'package:course_app/pages/chat/main.dart';
 import 'package:course_app/pages/dashboard/bottom_navigation.dart';
 import 'package:course_app/pages/monitor/main.dart';
 import 'package:course_app/pages/register/main.dart';
@@ -34,9 +34,9 @@ Widget buildItemComponent(index) {
     case 0:
       return Monitor();
     case 1:
-      // return SupportChat();
+      return SupportChat();
     case 2:
-      // return UserAccount();
+      return UserAccount();
     default:
       return Monitor();
   }
