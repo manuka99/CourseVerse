@@ -1,19 +1,19 @@
-import 'package:course_app/Widgets/doctor.box.dart';
+import 'package:course_app/Widgets/course.box.dart';
 import 'package:course_app/common/app.constraints.dart';
 import 'package:course_app/common/custom_colors.dart';
-import 'package:course_app/models/doctor.dart';
-import 'package:course_app/services/nearby_doctor_service.dart';
+import 'package:course_app/models/course.dart';
+import 'package:course_app/services/course_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DoctorsNearby extends StatefulWidget {
+class CourseNearby extends StatefulWidget {
 
   @override
   _DoctorsNearbyState createState() => _DoctorsNearbyState();
 }
 
-class _DoctorsNearbyState extends State<DoctorsNearby> {
-  late Iterable<Doctor> doctors = [];
+class _DoctorsNearbyState extends State<CourseNearby> {
+  late Iterable<Course> courses = [];
 
   @override
   void initState() {
@@ -21,8 +21,8 @@ class _DoctorsNearbyState extends State<DoctorsNearby> {
   }
 
   loadDoctors() async {
-    doctors = await NearByDoctorsService.getDoctors();
-    print(doctors.length);
+    courses = await CourseService.getDoctors();
+    print(courses.length);
     setState(() {
     });
   }
@@ -37,7 +37,7 @@ class _DoctorsNearbyState extends State<DoctorsNearby> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Doctors nearby you",
+                "Trending Courses",
                 style: TextStyle(
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w600,
@@ -66,9 +66,9 @@ class _DoctorsNearbyState extends State<DoctorsNearby> {
           padding: EdgeInsets.only(left: 10),
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: doctors.length,
+              itemCount: courses.length,
               itemBuilder: (context, index) =>
-                  DoctorBox(doctor: doctors.elementAt(index))),
+                  CourseBox(course: courses.elementAt(index))),
         ),
       ],
     );

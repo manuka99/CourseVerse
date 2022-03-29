@@ -1,12 +1,12 @@
 import 'package:course_app/common/custom_colors.dart';
-import 'package:course_app/models/doctor.dart';
+import 'package:course_app/models/course.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DoctorBox extends StatelessWidget {
+class CourseBox extends StatelessWidget {
 
-  late Doctor doctor;
-  DoctorBox({required this.doctor});
+  late Course course;
+  CourseBox({required this.course});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class DoctorBox extends StatelessWidget {
                         height: 48,
                       ),
                       Text(
-                        doctor.name,
+                        course.name,
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w600,
@@ -55,7 +55,7 @@ class DoctorBox extends StatelessWidget {
                         height: 4,
                       ),
                       Text(
-                        doctor.skill,
+                        course.specialization,
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w600,
@@ -71,7 +71,7 @@ class DoctorBox extends StatelessWidget {
                             child: Icon(Icons.star,
                                 color: Colors.amberAccent, size: 12)),
                         TextSpan(
-                          text: " ${doctor.rating}",
+                          text: " ${course.rating}",
                           style: TextStyle(
                               fontFamily: "Poppins",
                               fontWeight: FontWeight.w600,
@@ -89,7 +89,7 @@ class DoctorBox extends StatelessWidget {
               left: 0,
               right: 0,
               child: CircleAvatar(
-                backgroundImage: NetworkImage(doctor.imageUrl),
+                backgroundImage: NetworkImage(course.imageUrl),
                 backgroundColor: Colors.transparent,
                 radius: 59 / 2,
               ),

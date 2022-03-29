@@ -23,7 +23,7 @@ class _IntroScreenState extends State<IntroScreen> {
         backgroundColor: Colors.white,
         widgetDescription: Column(
           children: [
-            Text("Search Doctors",
+            Text("Instructor Led Teaching",
                 style: TextStyle(
                     fontSize: 20,
                     fontFamily: "Poppins",
@@ -32,7 +32,7 @@ class _IntroScreenState extends State<IntroScreen> {
             SizedBox(
               height: 10,
             ),
-            Text("Get list of best doctor nearby you",
+            Text("All instructors are certified experts",
                 style: TextStyle(
                     fontSize: 14,
                     fontFamily: "Poppins",
@@ -45,7 +45,7 @@ class _IntroScreenState extends State<IntroScreen> {
         backgroundColor: Colors.white,
         widgetDescription: Column(
           children: [
-            Text("Book Appointment",
+            Text("Premium Online Courses",
                 style: TextStyle(
                     fontSize: 20,
                     fontFamily: "Poppins",
@@ -54,7 +54,7 @@ class _IntroScreenState extends State<IntroScreen> {
             SizedBox(
               height: 10,
             ),
-            Text("Book an appointment with a right doctor",
+            Text("All courses are updated regularly",
                 style: TextStyle(
                     fontSize: 14,
                     fontFamily: "Poppins",
@@ -67,7 +67,7 @@ class _IntroScreenState extends State<IntroScreen> {
         backgroundColor: Colors.white,
         widgetDescription: Column(
           children: [
-            Text("Book Diagonostic",
+            Text("Industry Recognized",
                 style: TextStyle(
                     fontSize: 20,
                     fontFamily: "Poppins",
@@ -76,7 +76,7 @@ class _IntroScreenState extends State<IntroScreen> {
             SizedBox(
               height: 10,
             ),
-            Text("Search and book diagnostic test",
+            Text("All certificates are highly recognized",
                 style: TextStyle(
                     fontSize: 14,
                     fontFamily: "Poppins",

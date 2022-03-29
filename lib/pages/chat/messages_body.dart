@@ -56,7 +56,7 @@ class _MessagesBodyState extends State<MessagesBody> {
         sendAt: DateTime.now(),
         status: 'sent'),
     Message(
-        message: "Welcome to Doctor Nest 🙏❤",
+        message: "Welcome to Course Verse 🙏❤",
         msgID: "1",
         userID: '',
         participant: "supportTeam",
