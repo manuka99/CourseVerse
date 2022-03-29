@@ -3,14 +3,16 @@ import 'package:course_app/pages/courses/admin_login.dart';
 import 'package:course_app/pages/courses/course_list.dart';
 import 'package:flutter/material.dart';
 import 'package:course_app/common/custom_colors.dart';
+import 'package:course_app/pages/chat/main.dart';
+import 'package:course_app/pages/dashboard/main.dart';
 import 'package:course_app/pages/intro/main.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:course_app/pages/register/main.dart';
 import 'package:course_app/pages/register/mobile/main.dart';
 import 'package:course_app/pages/register/mobile/otp/main.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'package:course_app/pages/dashboard/main.dart';
 import 'package:course_app/pages/courses/course_splash.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -49,8 +51,8 @@ class CourseVerse extends StatelessWidget {
           scaffoldBackgroundColor: CustomColors.app_bg_scaffold,
           primaryColor: CustomColors.app_primary,
           textTheme: Theme.of(context).textTheme.apply(
-            bodyColor: CustomColors.bodyTextColor,
-          ),
+                bodyColor: CustomColors.bodyTextColor,
+              ),
           visualDensity: VisualDensity.adaptivePlatformDensity),
     );
   }
