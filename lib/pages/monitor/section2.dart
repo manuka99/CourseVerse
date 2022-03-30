@@ -1,5 +1,5 @@
 import 'package:course_app/pages/monitor/banners.dart';
-import 'package:course_app/pages/monitor/doctors_nearby.dart';
+import 'package:course_app/pages/monitor/course_nearby.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class Section2 extends StatelessWidget {
           SizedBox(height: 10),
           Banners(),
           SizedBox(height: 10),
-          DoctorsNearby(),
+          CourseNearby(),
           Card(
             elevation: 10,
             semanticContainer: true,

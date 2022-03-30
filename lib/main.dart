@@ -40,7 +40,7 @@ class CourseVerse extends StatelessWidget {
           "/course": (context) => CourseMainScreen(),
           "/courses-page": (context) => CoursesPage(),
           "/admin-login": (context) => AdminLogin(),
-          "/admin-course-list": (context) => AdminCourseAdd(),
+          "/admin-course-add": (context) => AdminCourseAdd(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
         };
         WidgetBuilder? builder = routes[settings.name];

@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:flutter/material.dart';
 
-import 'course_list.dart';
+import 'admin_courses_list.dart';
 // import 'package:CTSE/common/theme_helper.dart';
 // import 'package:CTSE/pages/widgets/header_widget.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -207,7 +207,7 @@ class _AdminCourseAddState extends State<AdminCourseAdd> {
                               if (_formKey.currentState!.validate()) {
                                 Navigator.of(context).pushAndRemoveUntil(
                                     MaterialPageRoute(
-                                        builder: (context) => CoursesPage()),
+                                        builder: (context) => AdminCourseList()),
                                     (Route<dynamic> route) => false);
                                 setState(() {
                                   cname = cnameController.text;

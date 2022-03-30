@@ -32,19 +32,19 @@ class ProfileSection2 extends StatelessWidget {
 
 List<ProfileSection2BTN> sectionButtons = [
   ProfileSection2BTN(
-      title: "My Doctors",
+      title: "My Courses",
       icon: Icons.earbuds,
       route: "/auth/my-doctors"),
   ProfileSection2BTN(
-      title: "Appointments",
+      title: "Lectures",
       icon: Icons.calendar_today_outlined,
       route: "/auth/appointments"),
   ProfileSection2BTN(
-      title: "Online consultation",
+      title: "Online discussions",
       icon: Icons.people_alt_outlined,
       route: "/auth/consultation"),
   ProfileSection2BTN(
-      title: "Medical records",
+      title: "Tutorials and Resources",
       icon: Icons.receipt_long_outlined,
       route: "/auth/mrecords"),
   ProfileSection2BTN(
@@ -52,7 +52,7 @@ List<ProfileSection2BTN> sectionButtons = [
       icon: Icons.watch_later_outlined,
       route: "/auth/reminders"),
   ProfileSection2BTN(
-      title: "Health interest",
+      title: "Specialization interest",
       icon: Icons.health_and_safety,
       route: "/auth/health"),
   ProfileSection2BTN(

@@ -10,19 +10,19 @@ class Section1 extends StatelessWidget {
     CircularButton(
         svg:
             SvgPicture.asset("assets/icons/nurse.svg", color: Colors.lightBlue),
-        title: "Courses",
-        description: "Course Management",
-        route: "/course"),
+        title: "Professors",
+        description: "Online Teaching",
+        route: "/order/history"),
     CircularButton(
         svg: SvgPicture.asset("assets/icons/pill.svg", color: Colors.lightBlue),
-        title: "Medicine",
-        description: "Buy Medicine",
-        route: "/order/history"),
+        title: "Courses",
+        description: "Premium Courses",
+        route: "/course"),
     CircularButton(
         svg: SvgPicture.asset("assets/icons/microscope.svg",
             color: Colors.lightBlue),
-        title: "Diagnostic",
-        description: "Lab Reports",
+        title: "Blogs, Podcast",
+        description: "Stay Updated",
         route: "/order/history"),
   ];
 
@@ -48,7 +48,7 @@ class Section1 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Lanka Health",
+                  "Course Verse",
                   style: TextStyle(
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w700,
