@@ -1,203 +1,133 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:crudapp/addnote.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-//import 'package:CTSE/pages/update_student_page.dart';
 
-class AdminCourseList extends StatefulWidget {
-  AdminCourseList({Key? key}) : super(key: key);
+//import 'editnote.dart';
 
-  @override
-  _ListAdminCoursesPageState createState() => _ListAdminCoursesPageState();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(AdminCourseList());
 }
 
-class _ListAdminCoursesPageState extends State<AdminCourseList> {
-  final Stream<QuerySnapshot> coursesStream =
+class AdminCourseList  extends StatefulWidget {
+  @override
+  _ListAdminCoursesPageState  createState() => _ListAdminCoursesPageState ();
+}
+
+class _ListAdminCoursesPageState  extends State<AdminCourseList > {
+  final Stream<QuerySnapshot> _usersStream =
       FirebaseFirestore.instance.collection('courses').snapshots();
 
-  // For Deleting User
-  CollectionReference courses =
-      FirebaseFirestore.instance.collection('courses');
-  Future<void> deleteCourse(id) {
-    // print("User Deleted $id");
-    return courses
-        .doc(id)
-        .delete()
-        .then((value) => print('User Deleted'))
-        .catchError((error) => print('Failed to Delete user: $error'));
-  }
-
+      
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<QuerySnapshot>(
-        stream: coursesStream,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Courses List'),
+      ),
+      body: StreamBuilder(
+        stream: _usersStream,
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
-            print('Something went Wrong');
+            return Text("something is wrong");
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
+            return Center(
               child: CircularProgressIndicator(),
             );
           }
 
-          final List storedocs = [];
-          snapshot.data!.docs.map((DocumentSnapshot document) {
-            Map a = document.data() as Map<String, dynamic>;
-            storedocs.add(a);
-            a['id'] = document.id;
-          }).toList();
-
           return Container(
-            height: 600,
-            width: double.infinity,
-            // decoration: const BoxDecoration(
-            //   image: DecorationImage(
-            //       image: AssetImage("images/books.jpg"), fit: BoxFit.cover),
-            // ),
-            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Table(
-                border: TableBorder.all(),
-                columnWidths: const <int, TableColumnWidth>{
-                  1: FixedColumnWidth(90),
-                },
-                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                children: [
-                  TableRow(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ListView.builder(
+              itemCount: snapshot.data!.docs.length,
+              itemBuilder: (_, index) {
+                return GestureDetector(
+                  onTap: () {
+                    // Navigator.pushReplacement(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (_) =>
+                    //         editnote(docid: snapshot.data!.docs[index]),
+                    //   ),
+                    // );
+                  },
+                  child: Column(
                     children: [
-                      TableCell(
-                        child: Container(
-                          color: Colors.greenAccent,
-                          child: Center(
-                            child: Text(
-                              'Name',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
+                      SizedBox(
+                        height: 4,
                       ),
-                      TableCell(
-                        child: Container(
-                          color: Colors.greenAccent,
-                          child: Center(
-                            child: Text(
-                              'Courses  ',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 3,
+                          right: 3,
                         ),
-                      ),
-                      TableCell(
-                        child: Container(
-                          color: Colors.greenAccent,
-                          child: Center(
-                            child: Text(
-                              'Fee',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        child: ListTile(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            side: BorderSide(
+                              color: Colors.black,
                             ),
                           ),
-                        ),
-                      ),
-                      //    TableCell(
-                      //   child: Container(
-                      //     color: Colors.greenAccent,
-                      //     child: Center(
-                      //       child: Text(
-                      //         'Time',
-                      //         style: TextStyle(
-                      //           fontSize: 14.0,
-                      //           fontWeight: FontWeight.bold,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
-                      TableCell(
-                        child: Container(
-                          color: Colors.greenAccent,
-                          child: Center(
-                            child: Text(
-                              'Action',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          title: Text(
+                            snapshot.data!.docChanges[index].doc['cname'],
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
                             ),
                           ),
+                          subtitle: Text(
+                            snapshot.data!.docChanges[index].doc['time'],
+                            style: TextStyle(
+                              fontSize: 15,
+                            ),
+                          ),
+                           trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            //ref.child(snapshot.key!).remove();
+                          },
+                          icon: const Icon(
+                            Icons.delete,
+                            color: Colors.red,
+                          )),
+                      IconButton(
+                          onPressed: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         // ignore: unnecessary_new
+                            //         builder: (context) => new UpdateScreen(
+                            //               value: snapshot.key!,
+                            //             )));
+                          },
+                          icon: const Icon(
+                            Icons.update,
+                            color: Colors.green,
+                          )),
+                    ],
+                  ),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 12,
+                            horizontal: 16,
+                          ),
+                                 
                         ),
                       ),
                     ],
                   ),
-                  for (var i = 0; i < storedocs.length; i++) ...[
-                    TableRow(
-                      children: [
-                        TableCell(
-                          child: Center(
-                              child: Text(storedocs[i]['cname'],
-                                  style: TextStyle(fontSize: 12.0))),
-                        ),
-                        TableCell(
-                          child: Center(
-                              child: Text(storedocs[i]['courses'],
-                                  style: TextStyle(fontSize: 12.0))),
-                        ),
-                        TableCell(
-                          child: Center(
-                              child: Text(storedocs[i]['fee'],
-                                  style: TextStyle(fontSize: 12.0))),
-                        ),
-                        //   TableCell(
-                        //   child: Center(
-                        //       child: Text(storedocs[i]['time'],
-                        //           style: TextStyle(fontSize: 12.0))),
-                        // ),
-                        TableCell(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              IconButton(
-                                onPressed: () => {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) => UpdateStudentPage(
-                                  //         id: storedocs[i]['id']),
-                                  //   ),
-                                  // )
-                                },
-                                icon: Icon(
-                                  Icons.edit,
-                                  color: Colors.orange,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () =>
-                                    {deleteCourse(storedocs[i]['id'])},
-                                icon: Icon(
-                                  Icons.delete,
-                                  color: Colors.red,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ],
-              ),
+                );
+              },
             ),
           );
-        });
+        },
+      ),
+    );
   }
 }

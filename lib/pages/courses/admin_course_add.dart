@@ -1,14 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:flutter/material.dart';
-
 import 'admin_courses_list.dart';
-// import 'package:CTSE/common/theme_helper.dart';
-// import 'package:CTSE/pages/widgets/header_widget.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:hexcolor/hexcolor.dart';
-// import 'list_student_page.dart';
-// import 'widgets/header_widget.dart';
+
 
 class AdminCourseAdd extends StatefulWidget {
   AdminCourseAdd({Key? key}) : super(key: key);

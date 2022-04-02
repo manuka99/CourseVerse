@@ -1,10 +1,10 @@
+import 'package:course_app/pages/courses/admin_courses_list.dart';
 import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:course_app/common/custom_colors.dart';
-
 import 'admin_course_add.dart';
-import 'course_list.dart';
+import 'admin_courses_list.dart';
 
 class AdminLogin extends StatefulWidget {
   @override
