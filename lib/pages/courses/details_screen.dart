@@ -2,12 +2,15 @@ import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../common/custom_colors.dart';
+
 class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
          appBar: AppBar(
         title: Text("Course Details"),
+          backgroundColor: CustomColors.app_primary,
       ),
       body: Container(
         width: double.infinity,
