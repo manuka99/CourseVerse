@@ -17,7 +17,7 @@ class Section1 extends StatelessWidget {
         svg: SvgPicture.asset("assets/icons/pill.svg", color: Colors.lightBlue),
         title: "Courses",
         description: "Premium Courses",
-        route: "/order/history"),
+        route: "/course"),
     CircularButton(
         svg: SvgPicture.asset("assets/icons/microscope.svg",
             color: Colors.lightBlue),
