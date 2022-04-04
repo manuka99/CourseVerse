@@ -8,9 +8,9 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-         appBar: AppBar(
+      appBar: AppBar(
         title: Text("Course Details"),
-          backgroundColor: CustomColors.app_primary,
+        backgroundColor: CustomColors.app_primary,
       ),
       body: Container(
         width: double.infinity,
@@ -161,7 +161,6 @@ class DetailsScreen extends StatelessWidget {
                             ),
                             SizedBox(width: 20),
                             Expanded(
-                            
                               child: Container(
                                 alignment: Alignment.center,
                                 height: 56,
@@ -199,9 +198,9 @@ class CourseContent extends StatelessWidget {
   final String title;
   final bool isDone;
   const CourseContent({
-     Key? key,
+    Key? key,
     required this.number,
-   required this.duration,
+    required this.duration,
     required this.title,
     this.isDone = false,
   }) : super(key: key);

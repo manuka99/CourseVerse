@@ -3,7 +3,6 @@ import 'package:course_app/common/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'admin_courses_list.dart';
 
-
 class AdminCourseAdd extends StatefulWidget {
   AdminCourseAdd({Key? key}) : super(key: key);
 
@@ -55,6 +54,16 @@ class _AdminCourseAddState extends State<AdminCourseAdd> {
         .then((value) => print('Course Added'))
         .catchError((error) => print('Failed to Add user: $error'));
   }
+
+  void showAlertDialog(BuildContext context) => showDialog(context: context,
+    builder: (BuildContext context) { 
+    return  AlertDialog(
+     title: const Text('Success'),
+     content: const Text('New course successfully added'),
+     // ignore: deprecated_member_use
+     actions: [OutlineButton(onPressed: () => Navigator.of(context).pop(),child: const Text('Close'))]);
+     },
+   );
 
   @override
   Widget build(BuildContext context) {
@@ -201,7 +210,8 @@ class _AdminCourseAddState extends State<AdminCourseAdd> {
                               if (_formKey.currentState!.validate()) {
                                 Navigator.of(context).pushAndRemoveUntil(
                                     MaterialPageRoute(
-                                        builder: (context) => AdminCourseList()),
+                                        builder: (context) =>
+                                            AdminCourseList()),
                                     (Route<dynamic> route) => false);
                                 setState(() {
                                   cname = cnameController.text;
@@ -209,6 +219,7 @@ class _AdminCourseAddState extends State<AdminCourseAdd> {
                                   fee = feeController.text;
                                   time = timeController.text;
                                   addUser();
+                                   showAlertDialog(context);
                                   clearText();
                                 });
                               }

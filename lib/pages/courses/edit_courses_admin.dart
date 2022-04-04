@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../../common/custom_colors.dart';
 import 'admin_courses_list.dart';
@@ -23,8 +25,23 @@ class _AdminCourseEditState extends State<AdminCourseEdit> {
     super.initState();
   }
 
+  void _showUpdateToastMsg() {
+    Fluttertoast.showToast(
+      msg: " Successfully updated",
+      fontSize: 12,
+    );
+  }
+
+   void _showDeleteToastMsg() {
+    Fluttertoast.showToast(
+      msg: " Successfully deleted",
+      fontSize: 12,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: CustomColors.app_primary,
@@ -38,9 +55,10 @@ class _AdminCourseEditState extends State<AdminCourseEdit> {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (_) => AdminCourseList()));
               });
+                _showUpdateToastMsg();
             },
             child: Text("Update",
-            style: TextStyle(
+                style: TextStyle(
                     fontFamily: "Poppins",
                     color: Color.fromRGBO(255, 255, 255, 1),
                     height: 1)),
@@ -51,6 +69,7 @@ class _AdminCourseEditState extends State<AdminCourseEdit> {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (_) => AdminCourseList()));
               });
+             _showDeleteToastMsg();
             },
             child: Text("Delete",
                 style: TextStyle(

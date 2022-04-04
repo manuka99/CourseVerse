@@ -27,8 +27,8 @@ class _ListAdminCoursesPageState extends State<AdminCourseList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: Text('Courses List'),
-           backgroundColor: CustomColors.app_primary,
+        title: Text("Course List"),
+        backgroundColor: CustomColors.app_primary,
       ),
       body: StreamBuilder(
         stream: _usersStream,
@@ -95,7 +95,8 @@ class _ListAdminCoursesPageState extends State<AdminCourseList> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => AdminCourseEdit(docid: snapshot.data!.docs[index]),
+                                        builder: (context) => AdminCourseEdit(
+                                            docid: snapshot.data!.docs[index]),
                                       ),
                                     );
                                   },
@@ -104,11 +105,12 @@ class _ListAdminCoursesPageState extends State<AdminCourseList> {
                                     color: Colors.red,
                                   )),
                               IconButton(
-                                onPressed: () {
+                                  onPressed: () {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => AdminCourseEdit(docid: snapshot.data!.docs[index]),
+                                        builder: (context) => AdminCourseEdit(
+                                            docid: snapshot.data!.docs[index]),
                                       ),
                                     );
                                   },

@@ -3,6 +3,7 @@ import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:course_app/common/custom_colors.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'admin_course_add.dart';
 import 'admin_courses_list.dart';
 
@@ -12,6 +13,13 @@ class AdminLogin extends StatefulWidget {
 }
 
 class _AdminLoginWidgetState extends State<AdminLogin> {
+  void _showToastMsg() {
+    Fluttertoast.showToast(
+      msg: "Login Successfull",
+      fontSize: 12,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -83,6 +91,7 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
                         builder: (context) => AdminCourseAdd(),
                       ),
                     );
+                    _showToastMsg();
                   },
                   style: ButtonStyle(
                       fixedSize: MaterialStateProperty.all(Size(303, 50)),
