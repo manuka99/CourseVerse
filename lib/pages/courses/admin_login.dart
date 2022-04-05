@@ -1,11 +1,7 @@
-import 'package:course_app/pages/courses/admin_courses_list.dart';
-import 'package:course_app/pages/courses/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'admin_course_add.dart';
-import 'admin_courses_list.dart';
 
 class AdminLogin extends StatefulWidget {
   @override
@@ -114,21 +110,6 @@ class _AdminLoginWidgetState extends State<AdminLogin> {
                         height: 1),
                   ))),
 
-          // new TextButton(
-          //   style: ButtonStyle(
-          //     foregroundColor:
-          //         MaterialStateProperty.all<Color>(Colors.grey.shade700),
-          //   ),
-          //   onPressed: () {},
-          //   child: Text('Forgot Password ?'),
-          // ),
-          // new TextButton(
-          //   style: ButtonStyle(
-          //     foregroundColor: MaterialStateProperty.all<Color>(Colors.pink),
-          //   ),
-          //   onPressed: () {},
-          //   child: Text('Need a account? Sign up'),
-          // ),
           Expanded(
               child: Stack(
             children: [

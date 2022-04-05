@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
-
 import '../../common/custom_colors.dart';
 import 'admin_courses_list.dart';
 
@@ -100,9 +98,6 @@ class _AdminCourseEditState extends State<AdminCourseEdit> {
                         height: 1)),
               ),
             ),
-            // SizedBox(
-            //   height: 20,
-            // ),
             Container(
               margin: EdgeInsets.fromLTRB(25, 50, 25, 10),
               padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -126,19 +121,13 @@ class _AdminCourseEditState extends State<AdminCourseEdit> {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 40,
-            // ),
             Expanded(
               child: Container(
                 margin: EdgeInsets.fromLTRB(25, 50, 25, 10),
                 padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                 alignment: Alignment.center,
-                // decoration: BoxDecoration(border: Border.all()),
                 child: TextField(
                   controller: content,
-                  // expands: true,
-                  // maxLines: null,
                   decoration: InputDecoration(
                     hintText: 'Update Course Time',
                     labelText: 'Edit Course Time :',

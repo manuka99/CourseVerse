@@ -1,12 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:crudapp/addnote.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import '../../common/custom_colors.dart';
 import 'edit_courses_admin.dart';
-
-//import 'editnote.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
