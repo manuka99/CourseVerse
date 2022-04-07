@@ -1,3 +1,6 @@
+import 'package:course_app/Widgets/TutorMain.dart';
+import 'package:course_app/Widgets/pay_home.dart';
+import 'package:course_app/Widgets/userViewTutor.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/pages/chat/main.dart';
 import 'package:course_app/pages/dashboard/main.dart';
@@ -32,6 +35,9 @@ class CourseVerse extends StatelessWidget {
           "/register": (context) => RegisterHome(),
           "/register/mobile": (context) => RegisterMobile(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
+          "/tutora": ((context) => MyHomePage(title: '')),
+          "/tutoru": (context) => userViewTutor(title: ''),
+          "/pay": (context) => StripePayment(),
         };
         WidgetBuilder? builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder!(ctx));
