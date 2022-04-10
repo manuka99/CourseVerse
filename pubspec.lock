@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
+  awesome_card:
+    dependency: transitive
+    description:
+      name: awesome_card
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.7"
   boolean_selector:
     dependency: transitive
     description:
@@ -64,6 +71,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  credit_card_type_detector:
+    dependency: transitive
+    description:
+      name: credit_card_type_detector
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0"
+  credit_card_validator:
+    dependency: transitive
+    description:
+      name: credit_card_validator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   cross_file:
     dependency: transitive
     description:
@@ -78,6 +99,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
+  csslib:
+    dependency: transitive
+    description:
+      name: csslib
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -188,6 +216,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.0"
+  flutter_lints:
+    dependency: transitive
+    description:
+      name: flutter_lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -195,13 +230,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
-  flutter_staggered_grid_view:
-    dependency: "direct main"
-    description:
-      name: flutter_staggered_grid_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.4"
+
   flutter_svg:
     dependency: "direct main"
     description:
@@ -219,13 +248,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  fluttertoast:
-    dependency: "direct main"
-    description:
-      name: fluttertoast
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "8.0.9"
+
   http:
     dependency: transitive
     description:
@@ -282,6 +305,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  mask_text_input_formatter:
+    dependency: transitive
+    description:
+      name: mask_text_input_formatter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.3.0"
   matcher:
     dependency: transitive
     description:
@@ -359,13 +396,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
-  rflutter_alert:
-    dependency: "direct main"
-    description:
-      name: rflutter_alert
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.4"
+
   sky_engine:
     dependency: transitive
     description: flutter
@@ -406,6 +437,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  stripe_sdk:
+    dependency: "direct main"
+    description:
+      name: stripe_sdk
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.0-nullsafety.1"
+  supercharged:
+    dependency: transitive
+    description:
+      name: supercharged
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
+  supercharged_dart:
+    dependency: transitive
+    description:
+      name: supercharged_dart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   term_glyph:
     dependency: transitive
     description:
@@ -427,6 +479,76 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+  universal_html:
+    dependency: transitive
+    description:
+      name: universal_html
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.8"
+  universal_io:
+    dependency: transitive
+    description:
+      name: universal_io
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.4"
+  url_launcher:
+    dependency: transitive
+    description:
+      name: url_launcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.20"
+  url_launcher_android:
+    dependency: transitive
+    description:
+      name: url_launcher_android
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.15"
+  url_launcher_ios:
+    dependency: transitive
+    description:
+      name: url_launcher_ios
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.15"
+  url_launcher_linux:
+    dependency: transitive
+    description:
+      name: url_launcher_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
+  url_launcher_macos:
+    dependency: transitive
+    description:
+      name: url_launcher_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
+  url_launcher_platform_interface:
+    dependency: transitive
+    description:
+      name: url_launcher_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.5"
+  url_launcher_web:
+    dependency: transitive
+    description:
+      name: url_launcher_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.9"
+  url_launcher_windows:
+    dependency: transitive
+    description:
+      name: url_launcher_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
   uuid:
     dependency: "direct main"
     description:
@@ -441,6 +563,34 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  webview_flutter:
+    dependency: transitive
+    description:
+      name: webview_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.8.0"
+  webview_flutter_android:
+    dependency: transitive
+    description:
+      name: webview_flutter_android
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.8.5"
+  webview_flutter_platform_interface:
+    dependency: transitive
+    description:
+      name: webview_flutter_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.1"
+  webview_flutter_wkwebview:
+    dependency: transitive
+    description:
+      name: webview_flutter_wkwebview
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.7.2"
   xml:
     dependency: transitive
     description:
@@ -450,4 +600,4 @@ packages:
     version: "5.1.2"
 sdks:
   dart: ">=2.16.0 <3.0.0"
-  flutter: ">=2.0.0"
+

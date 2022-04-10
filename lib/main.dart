@@ -1,7 +1,3 @@
-import 'package:course_app/pages/courses/admin_course_add.dart';
-import 'package:course_app/pages/courses/admin_login.dart';
-import 'package:course_app/pages/courses/course_list.dart';
-import 'package:flutter/material.dart';
 import 'package:course_app/common/custom_colors.dart';
 import 'package:course_app/pages/chat/main.dart';
 import 'package:course_app/pages/dashboard/main.dart';
@@ -42,6 +38,9 @@ class CourseVerse extends StatelessWidget {
           "/admin-login": (context) => AdminLogin(),
           "/admin-course-add": (context) => AdminCourseAdd(),
           "/register/mobile/otp": (context) => MobileOtp(settings.arguments),
+          "/tutora": ((context) => MyHomePage(title: '')),
+          "/tutoru": (context) => userViewTutor(title: ''),
+          "/pay": (context) => StripePayment(),
         };
         WidgetBuilder? builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder!(ctx));
