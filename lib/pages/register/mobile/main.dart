@@ -84,7 +84,7 @@ class RegisterMobile extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: TextFormField(
                               initialValue: "+ 94",
                               textAlign: TextAlign.center,

@@ -6,13 +6,13 @@ import 'package:course_app/services/course_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CourseNearby extends StatefulWidget {
+class TrendingCourse extends StatefulWidget {
 
   @override
-  _DoctorsNearbyState createState() => _DoctorsNearbyState();
+  _TrendingCoursesState createState() => _TrendingCoursesState();
 }
 
-class _DoctorsNearbyState extends State<CourseNearby> {
+class _TrendingCoursesState extends State<TrendingCourse> {
   late Iterable<Course> courses = [];
 
   @override

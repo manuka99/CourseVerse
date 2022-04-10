@@ -39,7 +39,7 @@ class _RegisterHomeState extends State<RegisterHome> {
                         bottomLeft: Radius.circular(160),
                         bottomRight: Radius.circular(240))),
                 child: Center(
-                  child: Text("Lanka Health",
+                  child: Text("Course Verse",
                       style: TextStyle(
                         fontSize: 40,
                         fontFamily: "Poppins",

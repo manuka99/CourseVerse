@@ -13,7 +13,7 @@ class Section2 extends StatelessWidget {
           SizedBox(height: 10),
           Banners(),
           SizedBox(height: 10),
-          CourseNearby(),
+          TrendingCourse(),
           Card(
             elevation: 10,
             semanticContainer: true,

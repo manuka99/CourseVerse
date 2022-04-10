@@ -14,7 +14,7 @@ class Banners extends StatelessWidget {
           Card(
             semanticContainer: true,
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Image.asset("assets/images/doctor_banner.png",
+            child: Image.asset("assets/images/course_banner.png",
                 fit: BoxFit.cover),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
@@ -25,7 +25,7 @@ class Banners extends StatelessWidget {
           Card(
             semanticContainer: true,
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Image.asset("assets/images/doctor_banner.png",
+            child: Image.asset("assets/images/course_banner.png",
                 fit: BoxFit.cover),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
